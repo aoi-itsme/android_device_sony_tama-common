@@ -24,7 +24,6 @@ genfscon sysfs /devices/platform/soc/a88000.i2c/i2c-0/0-0061/power_supply/wirele
 
 genfscon sysfs /devices/virtual/switch/lid/state                u:object_r:sysfs_switch_lid:s0
 
-genfscon proc /sys/kernel/sched_autogroup_enabled               u:object_r:proc_sched:s0
 genfscon debugfs /sched_features                                u:object_r:debugfs_sched_features:s0
 genfscon proc /sys/kernel/sched_boost                           u:object_r:proc_sched:s0
 genfscon debugfs /wlan0                                         u:object_r:debugfs_wlan:s0
