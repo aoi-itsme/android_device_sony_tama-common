@@ -54,7 +54,6 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 AB_OTA_PARTITIONS += \
     boot \
     dtbo \
-    odm \
     system \
     system_ext \
     product \
