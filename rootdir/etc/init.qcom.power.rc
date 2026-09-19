@@ -260,13 +260,20 @@ on enable-low-power
 
 on property:sys.boot_completed=1
     trigger enable-low-power
-    write /sys/block/mmcblk0/queue/read_ahead_kb 4096
-    write /sys/block/sda/queue/read_ahead_kb 512
-    write /sys/block/sdb/queue/read_ahead_kb 512
-    write /sys/block/sdc/queue/read_ahead_kb 512
-    write /sys/block/dm-0/queue/read_ahead_kb 512
-    write /sys/block/dm-1/queue/read_ahead_kb 512
-    write /sys/block/dm-2/queue/read_ahead_kb 512
+    write /sys/block/mmcblk0/queue/nr_requests 64
+    write /sys/block/mmcblk0/queue/read_ahead_kb 128
+    write /sys/block/sda/queue/nr_requests 64
+    write /sys/block/sda/queue/read_ahead_kb 128
+    write /sys/block/sdb/queue/nr_requests 64
+    write /sys/block/sdb/queue/read_ahead_kb 128
+    write /sys/block/sdc/queue/nr_requests 64
+    write /sys/block/sdc/queue/read_ahead_kb 128
+    write /sys/block/dm-0/queue/nr_requests 64
+    write /sys/block/dm-0/queue/read_ahead_kb 128
+    write /sys/block/dm-1/queue/nr_requests 64
+    write /sys/block/dm-1/queue/read_ahead_kb 128
+    write /sys/block/dm-2/queue/nr_requests 64
+    write /sys/block/dm-2/queue/read_ahead_kb 128
 
 # If UART is on, enable console_suspend on boot_complete to save power
 on property:sys.boot_completed=1 && property:init.svc.console=running
