@@ -189,8 +189,11 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    ax_init_sdm845.rc \
+    ax_kernel_manager.xml \
     fstab.qcom \
     idd.fstab \
+    init.axion-common.rc \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
     init.qcom.early_boot.sh \
