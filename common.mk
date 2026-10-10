@@ -430,7 +430,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/clover/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # Telephony
@@ -453,10 +453,6 @@ PRODUCT_PACKAGES += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch-service.tama
 
 # USB
 PRODUCT_PACKAGES += \
