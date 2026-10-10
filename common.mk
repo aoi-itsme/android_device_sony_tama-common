@@ -65,6 +65,7 @@ PRODUCT_PACKAGES += \
 # Enable blur
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.surface_flinger.supports_background_blur=1
+    ro.surface_flinger.uclamp.min=512
     
 # Cgroups
 PRODUCT_COPY_FILES += \
