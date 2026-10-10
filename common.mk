@@ -20,6 +20,9 @@ endif
 
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
+# Axion flags
+TARGET_SUPPORTS_KERNEL_MANAGER := true
+
 # Disable Scudo
 PRODUCT_USE_SCUDO := false
 PRODUCT_DISABLE_SCUDO := true
@@ -194,8 +197,11 @@ PRODUCT_COPY_FILES += \
 
 # Common init scripts
 PRODUCT_PACKAGES += \
+    ax_init_sdm845.rc \
+    ax_kernel_manager.xml \
     fstab.qcom \
     idd.fstab \
+    init.axion.rc \
     init.class_main.sh \
     init.msm.usb.configfs.rc \
     init.qcom.early_boot.sh \
